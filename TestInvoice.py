@@ -7,5 +7,6 @@ def products():
                 'Notebook': {'qnt': 5, 'unit_price': 7.5, 'discount': 10}}
     return products
 
-def test_CanFindInvoiceClass():
+def test_CanCalculateTotalImpurePrice(products):
     invoice = Invoice()
+    invoice.totalImpurePrice(products)
