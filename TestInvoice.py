@@ -27,3 +27,7 @@ def test_CanCalculateTotalPurePrice(invoice, products):
 def test_CanGetMostExpensiveItemAfterDiscount(invoice, products):
     invoice.getMostExpensiveItemAfterDiscount(products)
     assert invoice.getMostExpensiveItemAfterDiscount(products) == 'Notebook'
+
+def test_CanGetLeastExpensiveItemAfterDiscount(invoice, products):
+    invoice.getLeastExpensiveItemAfterDiscount(products)
+    assert invoice.getLeastExpensiveItemAfterDiscount(products) == 'Pen'

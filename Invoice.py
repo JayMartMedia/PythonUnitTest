@@ -44,6 +44,18 @@ class Invoice:
                 most_expensive_product = key
         return most_expensive_product
 
+    # Returns the least expensive single item after discount from the list
+    def getLeastExpensiveItemAfterDiscount(self, products):
+        least_expensive_product = None
+        min_price_found = None
+        for key in products:
+            product = products[key]
+            product_price = product['unit_price'] * (1 - product['discount']/100)
+            if min_price_found == None or product_price < min_price_found:
+                min_price_found = product_price
+                least_expensive_product = key
+        return least_expensive_product
+
     def inputAnswer(self, input_value):
         while True:
             userInput = input(input_value)
