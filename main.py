@@ -16,6 +16,8 @@ while True:
 
 total_amount = Invoice().totalPurePrice(products)
 most_expensive_item = Invoice().getMostExpensiveItemAfterDiscount(products)
+least_expensive_item = Invoice().getLeastExpensiveItemAfterDiscount(products)
 
 print("Your total pure price is: ", total_amount)
 print("Your most expensive item is: ", most_expensive_item)
+print("Your least expensive item is: ", least_expensive_item)
